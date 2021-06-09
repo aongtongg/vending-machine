@@ -1,0 +1,134 @@
+$color-1: #282c34;
+body {
+    background-color: $color-1 !important;
+}
+
+.machine-box {
+    border: 1px solid #656565;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    display: block;
+    background: rgb(15, 15, 15);
+    background: linear-gradient(0deg, rgba(15, 15, 15, 1) 0%, rgba(63, 63, 63, 1) 100%);
+    .machine-top,
+    .machine-center,
+    .machine-bottom {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .machine-cart,
+    .machine-product {
+        width: 70%;
+        width: calc(70% - 5px);
+        margin-right: 5px;
+        border: 1px solid #848484;
+        border-radius: 6px;
+        padding: 0 10px;
+        min-height: 200px;
+        display: block;
+        background-color: #030303;
+        overflow: hidden;
+        .row {
+            .col-3 {
+                background-color: #141414;
+                text-align: center;
+                padding: 0.7rem;
+                .machine-item {
+                    .machine-item-name {
+                        color: #fff;
+                        font-size: 0.9rem;
+                        overflow: hidden;
+                        img {
+                            max-width: 100%;
+                            max-height: 50px;
+                        }
+                    }
+                    .machine-item-stock {
+                        color: rgb(175, 175, 175);
+                        font-size: 0.7rem;
+                    }
+                }
+                .btn {
+                    cursor: not-allowed;
+                    margin: 5px;
+                    opacity: 0.4;
+                    padding: 0 0.75rem;
+                    font-size: 0.9rem;
+                    background-color: #ff703c;
+                    border-color: #ff703c;
+                    &:disabled {
+                        cursor: not-allowed;
+                    }
+                    &:focus {
+                        box-shadow: none;
+                    }
+                    &.active {
+                        opacity: 1;
+                        cursor: pointer;
+                        background-color: #008d03;
+                        border-color: #008d03;
+                    }
+                }
+            }
+        }
+    }
+    .machine-pay {
+        width: 30%;
+        width: calc(30% - 5px);
+        margin-left: 5px;
+        border: 1px solid #848484;
+        border-radius: 6px;
+        padding: 10px;
+        min-height: 200px;
+        display: block;
+        .machine-money,
+        .machine-money-code {
+            background-color: #d8d8d8;
+            min-height: 1.5rem;
+            border-radius: 3px;
+            padding: 0 0.25rem;
+        }
+        .machine-money-add,
+        .machine-money-digit {
+            margin-top: 10px;
+            padding: 0 10px;
+            border-radius: 3px;
+            overflow: hidden;
+            .row {
+                .col {
+                    cursor: pointer;
+                    color: #fff;
+                    background-color: #ff703c;
+                    text-align: center;
+                }
+            }
+        }
+        .machine-money-add {
+            margin-bottom: 10px;
+        }
+        .machine-money-code-error {
+            text-align: center;
+            color: red
+        }
+    }
+    .machine-cart {
+        width: 50%;
+        border: 1px solid #848484;
+        border-radius: 6px;
+        min-height: 100px;
+        margin: 10px auto;
+        padding: 0 10px;
+        background-color: #030303;
+        overflow: hidden;
+        .row {
+            .col-3 {
+                text-align: center;
+                background-color: #141414;
+                color: rgb(173, 173, 173);
+                font-size: 0.9rem;
+                padding: 0.2rem 0.75rem;
+            }
+        }
+    }
+}
